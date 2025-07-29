@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/auth/bloc/bloc/auth_bloc.dart';
  
 import 'package:weather_app/auth/widgets/gradient.dart';
 import 'package:weather_app/auth/widgets/login_field.dart';
@@ -8,7 +10,7 @@ import 'package:weather_app/auth/widgets/social_button.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
-  @override
+@override
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
@@ -18,8 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-     
-
+    
           
           
           return  Scaffold(
@@ -65,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(height: 20),
                     GradientButton(
                       onPressed: () {
-                        
+                        context.read<AuthBloc>().add(AuthLoginRequested(emailController.text.trim(), passwordController.text.trim()));
                       },
                     ),
                   ],
