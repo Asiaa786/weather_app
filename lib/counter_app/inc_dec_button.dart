@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/bloc/counter_bloc.dart';
-import 'package:weather_app/bloc/counter_event.dart';
+import 'package:weather_app/counter_app/bloc/counter_bloc.dart';
+import 'package:weather_app/counter_app/bloc/counter_event.dart';
  
 
 class Inc_Dec_Button extends StatelessWidget {
@@ -10,7 +10,7 @@ class Inc_Dec_Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final counterCubit = BlocProvider.of<CounterCubit>(context);
-    final counterBloc = BlocProvider.of<CounterBloc>(context);
+    final counterBloc = BlocProvider.of<CounterBloc>(context);// bloc relies on events 
     return  Scaffold(
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,

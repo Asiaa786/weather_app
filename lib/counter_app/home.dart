@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/bloc/counter_bloc.dart';
-import 'package:weather_app/cubit/counter_cubit.dart';
-import 'package:weather_app/inc_dec_button.dart';
+import 'package:weather_app/counter_app/bloc/counter_bloc.dart';
+import 'package:weather_app/counter_app/inc_dec_button.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
